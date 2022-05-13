@@ -1,19 +1,6 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, "application/json"
 
-  get "/" do
-    { 'authors': [
-      {
-        "name": "daniel owens",
-        "github": "https://github.com/Owens8",
-      },
-    ],
-     'project': {
-      'name': "Appointment Assist",
-      'backend': "https://github.com/jwc20/appointment-assist-backend/tree/main",
-      'frontend': "https://github.com/jwc20/appointment-assist-frontend/tree/main",
-    } }.to_json
-  end
 
   # Appointment routes
   get "/appointments" do
